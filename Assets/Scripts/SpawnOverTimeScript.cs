@@ -17,7 +17,7 @@ public class SpawnOverTimeScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        //get Renderer componenet when the game starts and store a reference to it.
         ourRenderer = GetComponent<Renderer>();
 
         // Stop our Spawner from being visible!

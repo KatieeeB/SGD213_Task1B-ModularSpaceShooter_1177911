@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour
     
     void Start()
     {
-        //getting a reference to the movement and shooting
+        //getting a reference to the movement and shooting scripts
         movement = GetComponent<Movement>();
         shooting = GetComponent<Shooting>();
     }
@@ -18,10 +18,12 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Player Movement
         float input = Input.GetAxis("Horizontal");
         
         movement.Move(Vector2.right * input);
 
+        //Shooting bullets
         if (Input.GetButton("Fire1"))
         {
             shooting.Shoot();

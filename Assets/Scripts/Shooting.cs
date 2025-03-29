@@ -14,39 +14,32 @@ public class Shooting : MonoBehaviour
 
     private float bulletOffset = 2f;
 
+    
+
     void Start()
     {
         // Do some math to perfectly spawn bullets in front of us
-        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 // Half of our size
-            + bullet.GetComponent<Renderer>().bounds.size.y / 2; // Plus half of the bullet size
+        // Half our size + Half of the bullet size
+        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 + bullet.GetComponent<Renderer>().bounds.size.y / 2;
     }
 
     public void Shoot()
     {
-         float CurrentTime = Time.time;
-
-            // Have a delay so we don't shoot too many bullets
-            if (CurrentTime - lastFiredTime > fireDelay)
-            {
-                Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset);
-
-                Instantiate(bullet, spawnPosition, transform.rotation);
-
-                lastFiredTime = CurrentTime;
             }
-    }
+        float currentTime = Time.time;
 
+        // Have a delay so we don't shoot too many bullets
+        if (currentTime - lastFiredTime > fireDelay)
+        {  
+            //spawn Position = players position + bulletOffset
+            Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset); 
+           
+            //Spawns Bullet at spawnPosition
+            Instantiate(bullet, spawnPosition, transform.rotation); 
 
-    /// <summary>
-    /// SampleMethod is a sample of how to use abstraction by
-    /// specification. It converts a provided integer to a float.
-    /// </summary>
-
-    /// <param name="number">any integer</param>
-    /// <returns>the number parameter as a float</returns>
-    public float SampleMethod(int number) 
-    {
-        return number;
+            //set lastFiredTime to currentTime
+            lastFiredTime = currentTime; 
+        }
     }
 
 }
