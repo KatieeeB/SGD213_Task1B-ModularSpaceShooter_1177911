@@ -5,20 +5,21 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     private Movement movement;
-    private ShootingScript shooting;
+    private Shooting shooting;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
+        //getting a reference to the movement and shooting
         movement = GetComponent<Movement>();
-        shooting = GetComponent<ShootingScript>();
+        shooting = GetComponent<Shooting>();
     }
 
     // Update is called once per frame
     void Update()
     {
         float input = Input.GetAxis("Horizontal");
-
+        
         movement.Move(Vector2.right * input);
 
         if (Input.GetButton("Fire1"))

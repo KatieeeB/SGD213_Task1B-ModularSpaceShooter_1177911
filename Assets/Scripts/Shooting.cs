@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShootingScript : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
 
     [SerializeField]
@@ -21,7 +21,6 @@ public class ShootingScript : MonoBehaviour
             + bullet.GetComponent<Renderer>().bounds.size.y / 2; // Plus half of the bullet size
     }
 
-
     public void Shoot()
     {
          float CurrentTime = Time.time;
@@ -36,6 +35,7 @@ public class ShootingScript : MonoBehaviour
                 lastFiredTime = CurrentTime;
             }
     }
+
 
     /// <summary>
     /// SampleMethod is a sample of how to use abstraction by
