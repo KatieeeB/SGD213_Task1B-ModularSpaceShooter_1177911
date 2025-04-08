@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Shooting : MonoBehaviour
@@ -25,7 +25,7 @@ public class Shooting : MonoBehaviour
 
     public void Shoot()
     {
-            }
+    
         float currentTime = Time.time;
 
         // Have a delay so we don't shoot too many bullets
