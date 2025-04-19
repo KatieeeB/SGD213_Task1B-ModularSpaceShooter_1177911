@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//old, delete this script.
+
 public class ConstantSpeedController : MonoBehaviour
 {
     //Direction the object is moving in, SerializeField allows it to be changed in the editor.

@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+//old
+
+
 public class Shooting : MonoBehaviour
 {
 

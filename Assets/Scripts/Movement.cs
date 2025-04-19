@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Delete this script, EngineBase new version
+
+
 public class Movement : MonoBehaviour
 {
     //Acceleration indicates how fast something moves, Serializefield exposes this value to the editor.

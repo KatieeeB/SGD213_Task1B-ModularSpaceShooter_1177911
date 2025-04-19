@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//delete this script
+
 /// <summary>
 /// PlayerMovementScript handles all of the movement specifc state and behaviour for the player.
 /// </summary>

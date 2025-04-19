@@ -12,7 +12,8 @@ public class WeaponMachineGun : WeaponBase {
         float currentTime = Time.time;
 
         // if enough time has passed since our last shot compared to our fireDelay, spawn our bullet
-        if (currentTime - lastFiredTime > fireDelay) {
+        if (currentTime - lastFiredTime > fireDelay) 
+        {
             // create our bullet
             GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, transform.rotation);
             // update our shooting state

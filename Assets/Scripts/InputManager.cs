@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//old
+
 public class InputManager : MonoBehaviour
 {
     private Movement movement;
