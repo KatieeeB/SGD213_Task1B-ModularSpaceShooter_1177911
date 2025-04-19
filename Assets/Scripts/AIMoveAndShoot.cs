@@ -8,13 +8,13 @@ public class AIMoveAndShoot : MonoBehaviour {
     private Vector2 movementDirection;
 
     // local references
-    private EnemyMovement enemyMovement;
+    private EngineBase engineBase;
     private WeaponBase weapon;
 
     void Start() 
     {
         // populate our local references
-        enemyMovement = GetComponent<EnemyMovement>();
+        engineBase = GetComponent<EngineBase>();
         weapon = GetComponent<WeaponBase>();
 
         // get a random direction between South-East and South-West
@@ -27,9 +27,9 @@ public class AIMoveAndShoot : MonoBehaviour {
     void Update () 
     {
         // move our enemy if we have a EnemyMovement component attached
-        if (enemyMovement != null) 
+         if (engineBase != null) 
         {
-            enemyMovement.MoveEnemy(movementDirection);
+            engineBase.Accelerate(movementDirection);
         }
 
         // shoot if we have a IWeapon component attached
