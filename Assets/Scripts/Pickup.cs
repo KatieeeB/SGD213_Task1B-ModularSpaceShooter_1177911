@@ -10,6 +10,9 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     [SerializeField]
+    private int healingAmount;
+
+    [SerializeField]
     public WeaponType weaponType;
 
     void OnTriggerEnter2D(Collider2D col)
@@ -36,6 +39,7 @@ public class Pickup : MonoBehaviour
     /// new IWeapon (based on the provided weaponType).
     /// </summary>
     /// <param name="player"></param>
+    
     private void HandlePlayerPickup(GameObject player)
     {
         // get the playerInput from the player

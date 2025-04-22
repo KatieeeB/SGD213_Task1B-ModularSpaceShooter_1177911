@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IHealth
+public class EnemyHealth : MonoBehaviour, IHealth
 {
-    [SerializeField]
+[SerializeField]
     protected int currentHealth;
     public int CurrentHealth { get { return currentHealth; } }
 
@@ -28,9 +28,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
         {
             currentHealth = maxHealth;
         }
-
-        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth);
-
     }
 
     /// <summary>
@@ -40,8 +37,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-
-        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth);
 
         if (currentHealth <= 0)
         {

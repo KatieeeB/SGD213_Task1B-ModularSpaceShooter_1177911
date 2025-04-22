@@ -14,6 +14,7 @@ public class DamageOnCollision : DetectCollisionBase
         {
             other.GetComponent<IHealth>().TakeDamage(damageToDeal);
         } 
+        
         else 
         {
             Debug.Log(other.name + " does not have an IHealth component");
