@@ -9,8 +9,7 @@ using UnityEngine;
 /// </summary>
 public class Pickup : MonoBehaviour
 {
-    [SerializeField]
-    private int healingAmount;
+
 
     [SerializeField]
     public WeaponType weaponType;

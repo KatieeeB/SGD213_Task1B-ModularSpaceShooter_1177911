@@ -27,9 +27,9 @@ public class HealthPickup : MonoBehaviour
 
  private void HandlePlayerPickup(GameObject player)
     {
-          // get the playerInput from the player
+          // get the playerHealth from the player
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-        // handle a case where the player doesnt have a PlayerInput
+        // handle a case where the player doesnt have a PlayerHealth
         if (playerHealth == null) 
         {
             Debug.LogError("Player doesn't have a PlayerHealth component.");
@@ -37,7 +37,7 @@ public class HealthPickup : MonoBehaviour
         } 
         else 
         {
-            // tell the playerInput to SwapWeapon based on our weaponType
+            // Heal the player
             playerHealth.Heal(healingAmount);
         }
     }
