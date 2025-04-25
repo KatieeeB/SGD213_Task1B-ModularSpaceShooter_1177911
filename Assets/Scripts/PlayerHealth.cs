@@ -23,13 +23,14 @@ public class PlayerHealth : MonoBehaviour, IHealth
     /// <param name="healingAmount">The amount of health to gain, this value should be positive</param>
     public void Heal(int healingAmount)
     {
-        currentHealth += healingAmount;
+        currentHealth += healingAmount; //add healingAmount to currentHealth
+
         if (currentHealth > maxHealth) //if current health exceeds MaxHealth set it to the max.
         {
             currentHealth = maxHealth;
         }
 
-        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth);
+        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth); //update player health bar
 
     }
 
@@ -39,9 +40,9 @@ public class PlayerHealth : MonoBehaviour, IHealth
     /// <param name="damageAmount">The amount of damage to lose, this value should be positive</param>
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
+        currentHealth -= damageAmount; //take damageAmount from currentHealth
 
-        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth);
+        UIManager.instance.UpdatePlayerHealthSlider((float)currentHealth / (float)maxHealth); //update player health bar
 
         if (currentHealth <= 0)
         {

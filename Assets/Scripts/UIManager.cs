@@ -21,7 +21,8 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
-    public void UpdatePlayerHealthSlider(float percentage) {
+    public void UpdatePlayerHealthSlider(float percentage) //update Player Health Slider
+    {
         sldPlayerHealth.value = percentage;
     }
 }

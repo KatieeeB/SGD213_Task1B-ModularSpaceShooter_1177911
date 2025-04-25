@@ -27,7 +27,7 @@ public class HealthPickup : MonoBehaviour
 
  private void HandlePlayerPickup(GameObject player)
     {
-          // get the playerHealth from the player
+        // get the playerHealth from the player
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         // handle a case where the player doesnt have a PlayerHealth
         if (playerHealth == null) 

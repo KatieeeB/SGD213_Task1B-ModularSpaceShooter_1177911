@@ -28,6 +28,7 @@ public class PlayerInput : MonoBehaviour
 
     void Start()
     {
+        // populate our local references
         engineBase = GetComponent<EngineBase>();
         weapon = GetComponent<WeaponBase>();
     }
